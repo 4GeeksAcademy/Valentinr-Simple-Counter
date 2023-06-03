@@ -1,12 +1,37 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+body {
+    color: #fff;
+    background: linear-gradient(95deg, #aaa, #777);
+    margin: 0; /* Added to remove body margin */
+  }
+  
+  .clock-content {
+    width: 100%;
+    height: 200px;
+    display: flex; /* Changed flex shorthand to display */
+    flex-wrap: wrap; /* Added flex-wrap to wrap the elements when window size is reduced */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock img {
+    width: 135px;
+    height: 135px;
+  }
+  
+  .clock {
+    border: 2px solid #bbb;
+    padding: 2.35px 7px;
+    margin-right: 50px;
+  }
+  
+  .clock-num {
+    font-size: 80px;
+    border: 2px solid #bbb;
+    margin-right: 50px;
+    padding: 10px 30px;
+  }
+  
+  .clock-last {
+    margin: 0;
+  }
+  
