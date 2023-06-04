@@ -1,32 +1,25 @@
 import React from "react";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 //create your first component
 function  One () {
 
-    const [second, setSecond] = useState(0);
-    
-		const runTime = () => {
-			setSecond(second + 1);
-			}
-     
-
-    let intervalId		
-		const initialize = () => {
-			intervalId = setInterval(runTime, 1000)
-			if(second > 9){
-				clearInterval(intervalId)
-				setSecond(0)
-			}
-		}
-		initialize()
-
+	const [count, setCount] = useState(0)
+	
+	useEffect(() => {
+	   setTimeout(() => {
+		  setCount((count) => count + 1);
+		}, 1000);
+	});
+	const init = () => {
+		if(count > 9)
+		setCount(0)
+	}
+	init()
+	
 	return (
-		
-		 <div className="clock-num clock-last">{second}</div>
-		
+	<div className="clock-num">{count}</div>
 	);
 };
-
 export default One;

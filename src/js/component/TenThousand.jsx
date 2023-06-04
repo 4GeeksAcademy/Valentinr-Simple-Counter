@@ -1,28 +1,24 @@
 import React from "react";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 //create your first component
 function  TenThousand () {
 
-    const [tenThousand, setTenThousand] = useState(0);
-    
-		const runTime = () => {
-			setTenThousand(tenThousand + 1);
-			}
-     
+	const [count, setCount] = useState(0)
 
-    let intervalId		
-		const initialize = () => {
-			intervalId = setInterval(runTime, 1000000)
-			if(tenThousand > 9){
-				clearInterval(intervalId)
-				setTenThousand(0)
-			}
-		}
-		initialize()
-		
-		return (
-			<div className="clock-num">{tenThousand}</div>
-		)
-}
-export default TenThousand
+	useEffect(() => {
+		setTimeout(() => {
+			 setCount((count) => count + 1);
+		   }, 10000000);
+	   });
+	   const init = () => {
+		   if(count > 9)
+		   setCount(0)
+	   }
+	   init()
+
+
+	return ( <div className="clock-num">{count}</div>);
+};
+export default TenThousand;
