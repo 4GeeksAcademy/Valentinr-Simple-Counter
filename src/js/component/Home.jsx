@@ -11,7 +11,7 @@ import HundredThousand from "./HundredThousand.jsx";
 function  Home () {
 	
 	return (
-	<div className="clock">
+	<div className="clock container-fluid">
 		 <img src="https://cdn-icons-png.flaticon.com/512/2928/2928750.png"  alt="" />
 		 <HundredThousand />
 		 <TenThousand />
