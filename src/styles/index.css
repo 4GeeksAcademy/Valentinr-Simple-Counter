@@ -1,7 +1,7 @@
 body {
     color: #c3c31b;
     background: linear-gradient(95deg, #aaa, #777);
-    margin: 0; /* Added to remove body margin */
+    margin: 0; 
     background-image: url('https://www.somosh.com.br/wp-content/uploads/2020/02/Parcelas-atrasadas_-dicas-de-como-resolver-este-problema-768x432.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -22,8 +22,8 @@ body {
     width: 100%;
     height: 200px;
     margin-top: 15rem;
-    display: flex; /* Changed flex shorthand to display */
-    flex-wrap: nowrap; /* Added flex-wrap to wrap the elements when window size is reduced */
+    display: flex; 
+    flex-wrap: nowrap; 
     justify-content: center;
     align-items: center;
     padding: 2.35px 7px;
