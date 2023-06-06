@@ -18,13 +18,13 @@ const Home = () => {
 
   return (
     <div className="clock-content">
-      <div>
+      <div className="title">
         <h1>Time Is Endless...</h1>
       </div>
       <div className="clock d-flex justify-content-center">
         <img
           src="https://cdn-icons-png.flaticon.com/512/2928/2928750.png"
-          alt=""
+          alt="logo clock"
         />
         <div className="clock-num">{arrayCount[0]}</div>
         <div className="clock-num">{arrayCount[1]}</div>
