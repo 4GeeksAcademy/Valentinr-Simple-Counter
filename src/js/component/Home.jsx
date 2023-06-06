@@ -6,9 +6,9 @@ const Home = () => {
 
   useEffect(() => {
     const updateCount = () => {
-      setCount((prevCount) => prevCount + 1);
+      setCount((count) => count + 1);
 
-      const countToArr = count.toString().padStart(4, "0").split("");
+      const countToArr = count.toString().padStart(6 , "0").split("");
       setArrayCount(countToArr);
     };
 
@@ -23,6 +23,8 @@ const Home = () => {
 		<div className="clock-num">{arrayCount[1]}</div>
 		<div className="clock-num">{arrayCount[2]}</div>
      	<div className="clock-num">{arrayCount[3]}</div>
+     	<div className="clock-num">{arrayCount[4]}</div>
+     	<div className="clock-num">{arrayCount[5]}</div>
     </div>
   );
 };
