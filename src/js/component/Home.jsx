@@ -8,7 +8,7 @@ const Home = () => {
     const updateCount = () => {
       setCount((count) => count + 1);
 
-      const countToArr = count.toString().padStart(6 , "0").split("");
+      const countToArr = count.toString().padStart(6, "0").split("");
       setArrayCount(countToArr);
     };
 
@@ -17,20 +17,27 @@ const Home = () => {
   }, [count]);
 
   return (
-    <div className="clock d-flex justify-content-center fs-5">
-		<img src="https://cdn-icons-png.flaticon.com/512/2928/2928750.png"  alt="" />
-		<div className="clock-num">{arrayCount[0]}</div>
-		<div className="clock-num">{arrayCount[1]}</div>
-		<div className="clock-num">{arrayCount[2]}</div>
-     	<div className="clock-num">{arrayCount[3]}</div>
-     	<div className="clock-num">{arrayCount[4]}</div>
-     	<div className="clock-num">{arrayCount[5]}</div>
+    <div className="clock-content">
+      <div>
+        <h1>Time Is Endless...</h1>
+      </div>
+      <div className="clock d-flex justify-content-center">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2928/2928750.png"
+          alt=""
+        />
+        <div className="clock-num">{arrayCount[0]}</div>
+        <div className="clock-num">{arrayCount[1]}</div>
+        <div className="clock-num">{arrayCount[2]}</div>
+        <div className="clock-num">{arrayCount[3]}</div>
+        <div className="clock-num">{arrayCount[4]}</div>
+        <div className="clock-num">{arrayCount[5]}</div>
+      </div>
     </div>
   );
 };
 
 export default Home;
-
 
 // import React from "react";
 // import One from "./One.jsx";
@@ -40,10 +47,9 @@ export default Home;
 // import TenThousand from "./TenThousand.jsx";
 // import HundredThousand from "./HundredThousand.jsx";
 
-
 // //create your first component
 // function  Home () {
-	
+
 // 	return (
 // 	<div className="clock container-fluid">
 // 		 <img src="https://cdn-icons-png.flaticon.com/512/2928/2928750.png"  alt="" />
@@ -52,7 +58,7 @@ export default Home;
 // 		 <Thousand />
 // 		 <Hundreds />
 // 		 <Tens />
-// 		 <One /> 
+// 		 <One />
 // 	</div>
 // 	);
 // };
